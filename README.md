@@ -1,6 +1,13 @@
 # NeonPink GNOME Themes
 
-Custom GNOME Shell and GTK themes with pink neon cyberpunk aesthetic.
+Custom GNOME Shell and GTK themes with soft off-pink pastel aesthetic, featuring ethereal glows and increased transparency.
+
+## Color Palette
+Generated using `pastel` for beautiful, harmonious colors:
+- **Soft Pink**: #ffb3d9, #f8b0d8, #f1add8, #eaaad7
+- **Light Accents**: #f1cfe9, #e3a8d7
+- **Medium Backgrounds**: #b15dbc (177, 93, 188)
+- **Deep Tones**: #76347f (118, 52, 127)
 
 ## Location
 - **GnomeShell themes**: `/home/jnxlr/PRO/ART/DES/themes/GnomeShell/`
@@ -10,24 +17,43 @@ Custom GNOME Shell and GTK themes with pink neon cyberpunk aesthetic.
 ## Variants
 
 ### NeonPink (Static)
-Static neon glow effects - **Wayland compatible**.
+Soft pastel glow effects with high transparency - **Wayland compatible**.
 - Location: `GnomeShell/NeonPink/`
-- Features: Static pink neon borders, glowing menus, mist gradient backgrounds
+- Features: 
+  - Soft off-pink pastel colors throughout
+  - Enhanced transparency (30-50% on most elements)
+  - Static glowing borders and shadows
+  - Ethereal gradient backgrounds
+  - Comprehensive styling for all GNOME components:
+    - Workspace switcher & thumbnails
+    - Overview & search
+    - Quick settings & system menu
+    - Calendar & notifications
+    - Message lists & banners
+    - Buttons, sliders, switches
+    - Window picker & app icons
+    - Dash/dock
+    - OSD & lock screen
+    - Tooltips & popovers
 
 ### NeonPink_Animated
-Animated neon flicker and mist drift effects.
+Gentle pastel glow animations with breathing effects.
 - Location: `GnomeShell/NeonPink_Animated/`
-- Features: Pulsing neon borders, color-shifting, animated mist background
-- **Note**: May not work on GNOME Wayland (keyframe animations)
+- Features: 
+  - All features from static version
+  - Smooth `pastelGlow` animation (softer than original neon flicker)
+  - Gentle `mistDrift` background animation
+  - Animated quick toggles, calendar today, workspace indicators
+  - **Note**: May not work on GNOME Wayland (keyframe animations)
 
 ## Usage
 
 ### Activate Shell Theme
 ```bash
-# Static version (current)
+# Static version (recommended for Wayland)
 gsettings set org.gnome.shell.extensions.user-theme name "NeonPink"
 
-# Animated version
+# Animated version (better on X11)
 gsettings set org.gnome.shell.extensions.user-theme name "NeonPink_Animated"
 ```
 
@@ -36,7 +62,11 @@ gsettings set org.gnome.shell.extensions.user-theme name "NeonPink_Animated"
 - **Wayland**: Log out and back in
 
 ### GTK Theme for Apps
-The GTK 4.0 theme is automatically included in both variants for VS Code and other GTK apps.
+The GTK 4.0 theme is automatically included in both variants for VS Code and other GTK apps, featuring:
+- Matching off-pink color scheme
+- Increased transparency on windows and popups
+- Soft glowing accents on interactive elements
+- Pastel highlights for focused elements
 
 ## Customization
 Edit the CSS files directly:
@@ -45,5 +75,15 @@ Edit the CSS files directly:
 
 Changes take effect after reloading GNOME Shell.
 
+## Theme Features
+- **High Transparency**: Most elements use 25-50% opacity for ethereal effect
+- **Comprehensive Coverage**: Styles for 20+ GNOME Shell components
+- **Pastel Color Science**: Colors generated using `pastel` for optimal harmony
+- **Blur Effects**: `backdrop-filter: blur()` for depth and glassmorphism
+- **Accessibility**: Maintained readability despite transparency
+- **Performance**: Optimized animations (2-3.5s cycles on animated version)
+
 ---
 Created: 2026-02-21
+Updated: 2026-02-21 - Redesigned with pastel colors, increased transparency, and comprehensive component coverage
+

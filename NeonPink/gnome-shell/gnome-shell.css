@@ -1,0 +1,340 @@
+/* Soft Off-Pink Pastel - Wayland Compatible (No Keyframes) */
+
+/* Ethereal pastel background mist */
+stage {
+  background: linear-gradient(45deg, 
+    rgba(118, 52, 127, 0.45), 
+    rgba(255, 179, 217, 0.15),
+    rgba(177, 93, 188, 0.5), 
+    rgba(212, 165, 218, 0.2),
+    rgba(118, 52, 127, 0.48));
+}
+
+/* Panels and menus - soft pastel glow */
+#panel,
+.popup-menu,
+.modal-dialog,
+.notification-banner,
+.osd-window {
+  background: linear-gradient(135deg, rgba(177, 93, 188, 0.35) 0%, rgba(118, 52, 127, 0.4) 100%);
+  backdrop-filter: blur(12px);
+  border: 2px solid rgba(255, 179, 217, 0.6);
+  border-radius: 16px;
+  box-shadow: 0 0 10px rgba(230, 168, 215, 0.4),
+              0 0 20px rgba(248, 176, 216, 0.25),
+              0 0 30px rgba(255, 179, 217, 0.15),
+              inset 0 0 15px rgba(241, 207, 233, 0.15);
+}
+
+/* Top bar */
+#panel {
+  border-width: 2px;
+  box-shadow: 0 0 12px rgba(230, 168, 215, 0.45),
+              0 0 24px rgba(248, 176, 216, 0.3),
+              0 0 35px rgba(255, 179, 217, 0.2),
+              inset 0 0 18px rgba(241, 207, 233, 0.18);
+}
+
+#panel .panel-button {
+  border: 1px solid rgba(248, 176, 216, 0.4);
+  border-radius: 12px;
+  background: linear-gradient(135deg, rgba(118, 52, 127, 0.25), rgba(177, 93, 188, 0.3));
+  transition: all 0.2s ease;
+}
+
+#panel .panel-button:hover {
+  border-color: rgba(255, 179, 217, 0.8);
+  background: rgba(230, 168, 215, 0.25);
+  box-shadow: 0 0 10px rgba(248, 176, 216, 0.5), inset 0 0 8px rgba(241, 207, 233, 0.4);
+}
+
+/* Popup menus */
+.popup-menu,
+.popup-menu-content {
+  border-width: 2px;
+  box-shadow: 0 0 10px rgba(230, 168, 215, 0.4),
+              0 0 20px rgba(248, 176, 216, 0.25),
+              inset 0 0 12px rgba(241, 207, 233, 0.12);
+}
+
+.popup-menu-item {
+  border-radius: 10px;
+  transition: all 0.15s ease;
+}
+
+.popup-menu-item:focus,
+.popup-menu-item:hover {
+  background: linear-gradient(90deg, rgba(230, 168, 215, 0.2), rgba(241, 207, 233, 0.15));
+  box-shadow: inset 0 0 10px rgba(248, 176, 216, 0.35), 0 0 6px rgba(255, 179, 217, 0.3);
+}
+
+/* Modal dialogs */
+.modal-dialog {
+  box-shadow: 0 0 15px rgba(230, 168, 215, 0.45),
+              0 0 30px rgba(248, 176, 216, 0.3),
+              0 0 45px rgba(255, 179, 217, 0.2),
+              inset 0 0 20px rgba(241, 207, 233, 0.15);
+}
+
+/* Workspace switcher */
+.workspace-switcher,
+.workspace-thumbnails {
+  background: rgba(177, 93, 188, 0.3);
+  border: 2px solid rgba(255, 179, 217, 0.5);
+  border-radius: 12px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 10px rgba(230, 168, 215, 0.3), inset 0 0 8px rgba(241, 207, 233, 0.1);
+}
+
+.workspace-thumbnail-indicator {
+  border: 2px solid rgba(255, 179, 217, 0.9);
+  background: rgba(230, 168, 215, 0.4);
+  box-shadow: 0 0 8px rgba(248, 176, 216, 0.6);
+}
+
+/* Overview and search */
+.overview-controls,
+#overview {
+  background: rgba(118, 52, 127, 0.25);
+}
+
+.search-entry {
+  background: rgba(177, 93, 188, 0.35);
+  border: 2px solid rgba(255, 179, 217, 0.6);
+  border-radius: 14px;
+  color: #f1cfe9;
+  backdrop-filter: blur(8px);
+  box-shadow: inset 0 0 10px rgba(241, 207, 233, 0.15), 0 0 8px rgba(230, 168, 215, 0.3);
+  transition: all 0.2s ease;
+}
+
+.search-entry:focus {
+  border-color: rgba(255, 179, 217, 0.9);
+  box-shadow: inset 0 0 12px rgba(241, 207, 233, 0.25), 0 0 12px rgba(248, 176, 216, 0.5);
+}
+
+/* Search results */
+.search-section,
+.search-section-content {
+  background: rgba(177, 93, 188, 0.3);
+  border: 1px solid rgba(255, 179, 217, 0.4);
+  border-radius: 10px;
+  backdrop-filter: blur(8px);
+}
+
+.search-result {
+  border-radius: 8px;
+  transition: all 0.15s ease;
+}
+
+.search-result:hover,
+.search-result:focus,
+.search-result:selected {
+  background: rgba(230, 168, 215, 0.25);
+  box-shadow: inset 0 0 8px rgba(248, 176, 216, 0.3);
+}
+
+/* Buttons */
+.button,
+.modal-dialog-linked-button {
+  background: linear-gradient(135deg, rgba(177, 93, 188, 0.4), rgba(118, 52, 127, 0.45));
+  border: 1px solid rgba(255, 179, 217, 0.5);
+  border-radius: 10px;
+  color: #f1cfe9;
+  box-shadow: 0 0 6px rgba(230, 168, 215, 0.25);
+  transition: all 0.15s ease;
+}
+
+.button:hover {
+  background: linear-gradient(135deg, rgba(230, 168, 215, 0.5), rgba(177, 93, 188, 0.55));
+  border-color: rgba(255, 179, 217, 0.8);
+  box-shadow: 0 0 10px rgba(248, 176, 216, 0.5), inset 0 0 8px rgba(241, 207, 233, 0.2);
+}
+
+.button:active {
+  background: rgba(118, 52, 127, 0.6);
+  box-shadow: inset 0 0 10px rgba(177, 93, 188, 0.5);
+}
+
+/* Quick settings and system menu */
+.quick-settings,
+.quick-settings-grid,
+.quick-toggle {
+  background: rgba(177, 93, 188, 0.35);
+  border: 1px solid rgba(255, 179, 217, 0.5);
+  border-radius: 12px;
+  backdrop-filter: blur(10px);
+}
+
+.quick-toggle:hover {
+  background: rgba(230, 168, 215, 0.4);
+  box-shadow: 0 0 8px rgba(248, 176, 216, 0.4);
+}
+
+.quick-toggle:checked {
+  background: linear-gradient(135deg, rgba(255, 179, 217, 0.6), rgba(230, 168, 215, 0.65));
+  border-color: rgba(255, 179, 217, 0.9);
+  box-shadow: 0 0 10px rgba(248, 176, 216, 0.6), inset 0 0 10px rgba(241, 207, 233, 0.3);
+}
+
+/* Calendar and notifications */
+.calendar,
+.calendar-day-base {
+  background: rgba(177, 93, 188, 0.3);
+  border: 1px solid rgba(255, 179, 217, 0.4);
+  border-radius: 8px;
+}
+
+.calendar-day-base:hover,
+.calendar-day-base:focus {
+  background: rgba(230, 168, 215, 0.35);
+  box-shadow: inset 0 0 6px rgba(248, 176, 216, 0.3);
+}
+
+.calendar-day-base:selected {
+  background: linear-gradient(135deg, rgba(255, 179, 217, 0.5), rgba(230, 168, 215, 0.55));
+  border-color: rgba(255, 179, 217, 0.8);
+  box-shadow: 0 0 8px rgba(248, 176, 216, 0.5);
+}
+
+.calendar-today {
+  border: 2px solid rgba(255, 179, 217, 0.8);
+  background: rgba(230, 168, 215, 0.4);
+  font-weight: bold;
+  color: #ffb3d9;
+}
+
+/* Notification banners */
+.notification-banner {
+  background: rgba(177, 93, 188, 0.4);
+  border: 2px solid rgba(255, 179, 217, 0.6);
+  box-shadow: 0 0 12px rgba(230, 168, 215, 0.4), 0 0 20px rgba(248, 176, 216, 0.25);
+}
+
+.notification-banner:hover {
+  background: rgba(230, 168, 215, 0.45);
+  box-shadow: 0 0 15px rgba(248, 176, 216, 0.5);
+}
+
+/* Message list and notifications */
+.message-list,
+.message-list-section {
+  background: rgba(177, 93, 188, 0.25);
+  border-radius: 10px;
+}
+
+.message {
+  background: rgba(177, 93, 188, 0.35);
+  border: 1px solid rgba(255, 179, 217, 0.4);
+  border-radius: 10px;
+  backdrop-filter: blur(8px);
+  margin: 4px;
+}
+
+.message:hover {
+  background: rgba(230, 168, 215, 0.4);
+  border-color: rgba(255, 179, 217, 0.7);
+}
+
+/* Tooltips */
+.tooltip,
+.candidate-popup-boxpointer {
+  background: rgba(118, 52, 127, 0.85);
+  border: 1px solid rgba(255, 179, 217, 0.7);
+  border-radius: 8px;
+  color: #f1cfe9;
+  box-shadow: 0 0 10px rgba(230, 168, 215, 0.4), inset 0 0 8px rgba(241, 207, 233, 0.15);
+  backdrop-filter: blur(10px);
+}
+
+/* Sliders and switches */
+.slider {
+  -barlevel-height: 6px;
+  -barlevel-background-color: rgba(177, 93, 188, 0.4);
+  -barlevel-active-background-color: rgba(255, 179, 217, 0.8);
+  -barlevel-overdrive-color: rgba(230, 168, 215, 1);
+  -barlevel-border-width: 1px;
+  -barlevel-border-color: rgba(255, 179, 217, 0.5);
+}
+
+.toggle-switch {
+  background-color: rgba(177, 93, 188, 0.4);
+  border: 1px solid rgba(255, 179, 217, 0.5);
+}
+
+.toggle-switch:checked {
+  background-color: rgba(255, 179, 217, 0.7);
+  border-color: rgba(230, 168, 215, 0.9);
+  box-shadow: 0 0 8px rgba(248, 176, 216, 0.5);
+}
+
+/* Window picker and app icons */
+.window-clone-border {
+  border: 3px solid rgba(255, 179, 217, 0.7);
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(230, 168, 215, 0.5);
+}
+
+.app-well-app,
+.grid-search-result {
+  border-radius: 12px;
+  transition: all 0.15s ease;
+}
+
+.app-well-app:hover,
+.grid-search-result:hover {
+  background: rgba(230, 168, 215, 0.3);
+  box-shadow: 0 0 10px rgba(248, 176, 216, 0.4), inset 0 0 10px rgba(241, 207, 233, 0.2);
+}
+
+.app-well-app:active,
+.app-well-app:checked {
+  background: rgba(255, 179, 217, 0.4);
+  box-shadow: 0 0 12px rgba(230, 168, 215, 0.6);
+}
+
+/* Dash and dock */
+.dash-background {
+  background: rgba(177, 93, 188, 0.35);
+  border: 2px solid rgba(255, 179, 217, 0.5);
+  border-radius: 16px;
+  backdrop-filter: blur(12px);
+  box-shadow: 0 0 10px rgba(230, 168, 215, 0.3), inset 0 0 12px rgba(241, 207, 233, 0.1);
+}
+
+.dash-item-container > StButton {
+  border-radius: 10px;
+}
+
+/* Looking glass (Alt+F2 debugger) */
+.lg-dialog {
+  background: rgba(118, 52, 127, 0.9);
+  border: 2px solid rgba(255, 179, 217, 0.8);
+  border-radius: 12px;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 0 20px rgba(230, 168, 215, 0.5);
+}
+
+/* OSD (On-screen display) */
+.osd-window {
+  background: rgba(177, 93, 188, 0.75);
+  border: 2px solid rgba(255, 179, 217, 0.7);
+  box-shadow: 0 0 15px rgba(230, 168, 215, 0.5), inset 0 0 15px rgba(241, 207, 233, 0.15);
+}
+
+/* Screen shield and lock screen */
+.screen-shield-background {
+  background: linear-gradient(45deg, 
+    rgba(118, 52, 127, 0.6), 
+    rgba(255, 179, 217, 0.2),
+    rgba(177, 93, 188, 0.65), 
+    rgba(212, 165, 218, 0.25));
+}
+
+.unlock-dialog {
+  background: rgba(177, 93, 188, 0.4);
+  border: 2px solid rgba(255, 179, 217, 0.6);
+  border-radius: 16px;
+  backdrop-filter: blur(15px);
+  box-shadow: 0 0 20px rgba(230, 168, 215, 0.5);
+}
