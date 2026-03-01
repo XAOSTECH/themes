@@ -4,5 +4,5 @@
 ### Changed
 - chore(readme/dir): add GTK referral + move GTK Themes
 - dc-init
-- Redesign with soft off-pink pastels: use pastel-generated colors, increase transparency, add comprehensive GNOME component styling
+- Redesign with soft off-pink pastels: use pastel-generated colours, increase transparency, add comprehensive GNOME component styling
 
