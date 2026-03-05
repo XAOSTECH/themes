@@ -52,6 +52,11 @@
 
 ---
 
+> **Note:** This repository is part of the [**design-tools**](https://github.com/XAOSTECH/design-tools) monorepo.  
+> 📚 [**View full documentation →**](https://xaostech.github.io/design-tools)
+
+---
+
 ## 📋 Table of Contents
 
 - [Overview](#-overview)
@@ -74,17 +79,17 @@ Design themes (GRUB, GTK, vscode-workspace, e.a.)
 
 ### Why themes?
 
-{{WHY_PROJECT}}
+The `themes` project centralises desktop and editor theming assets so visual design can be shared, versioned, and reused across environments.
 
 ---
 
 ## ✨ Features
 
 - 🚀 **GTK Themes** - [README](../GTK/README.md)
-- 🔧 **Feature 2** - Description of feature 2
-- 📦 **Feature 3** - Description of feature 3
-- 🔒 **Feature 4** - Description of feature 4
-- ⚡ **Feature 5** - Description of feature 5
+- 🔧 **GNOME Shell Styling** - Coordinated shell CSS and asset variants
+- 📦 **Packaged Variants** - Static and animated theme flavours
+- 🔒 **Readable Contrast Choices** - Colour sets tuned for practical usability
+- ⚡ **Monorepo Integration** - Versioned alongside `design-flows`
 
 ---
 
@@ -92,9 +97,9 @@ Design themes (GRUB, GTK, vscode-workspace, e.a.)
 
 ### Prerequisites
 
-- {{PREREQUISITE_1}}
-- {{PREREQUISITE_2}}
-- {{PREREQUISITE_3}}
+- GNOME Shell with user-theme extension (for shell themes)
+- GTK 4-capable desktop applications
+- `gsettings` available for shell theme switching
 
 ### Quick Start
 
@@ -107,23 +112,24 @@ cd themes
 ./install.sh
 
 # Or manual installation
-{{MANUAL_INSTALL_STEPS}}
+cp -r GTK/* ~/.themes/
+gsettings set org.gnome.desktop.interface gtk-theme "NeonPink"
 ```
 
 ### Package Managers
 
 ```bash
 # npm
-npm install {{PACKAGE_NAME}}
+echo "No npm package is published for this repository"
 
 # yarn
-yarn add {{PACKAGE_NAME}}
+echo "No yarn package is published for this repository"
 
 # apt (Debian/Ubuntu)
-sudo apt install {{PACKAGE_NAME}}
+echo "Install by cloning the repository and copying theme assets"
 
 # brew (macOS)
-brew install {{PACKAGE_NAME}}
+echo "Homebrew package not available"
 ```
 
 ---
@@ -133,31 +139,34 @@ brew install {{PACKAGE_NAME}}
 ### Basic Usage
 
 ```bash
-{{BASIC_USAGE_EXAMPLE}}
+cd GTK
+ls
 ```
 
 ### Advanced Usage
 
 ```bash
-{{ADVANCED_USAGE_EXAMPLE}}
+gsettings set org.gnome.shell.extensions.user-theme name "NeonPink"
+gsettings set org.gnome.desktop.interface gtk-theme "NeonPink"
 ```
 
 ### Examples
 
 <details>
-<summary>📘 Example 1: {{EXAMPLE_1_TITLE}}</summary>
+<summary>📘 Example 1: Activate Static Theme</summary>
 
 ```bash
-{{EXAMPLE_1_CODE}}
+gsettings set org.gnome.shell.extensions.user-theme name "NeonPink"
+gsettings set org.gnome.desktop.interface gtk-theme "NeonPink"
 ```
 
 </details>
 
 <details>
-<summary>📗 Example 2: {{EXAMPLE_2_TITLE}}</summary>
+<summary>📗 Example 2: Activate Animated Variant</summary>
 
 ```bash
-{{EXAMPLE_2_CODE}}
+gsettings set org.gnome.shell.extensions.user-theme name "NeonPink_Animated"
 ```
 
 </details>
@@ -170,14 +179,17 @@ brew install {{PACKAGE_NAME}}
 
 | Variable | Description | Default |
 |----------|-------------|---------|
-| `{{ENV_VAR_1}}` | {{ENV_VAR_1_DESC}} | `{{ENV_VAR_1_DEFAULT}}` |
-| `{{ENV_VAR_2}}` | {{ENV_VAR_2_DESC}} | `{{ENV_VAR_2_DEFAULT}}` |
+| `XDG_CONFIG_HOME` | User configuration root used by desktop components | `~/.config` |
+| `XDG_DATA_HOME` | User data root that may contain theme assets | `~/.local/share` |
 
 ### Configuration File
 
 ```yaml
 # config.yml
-{{CONFIG_FILE_EXAMPLE}}
+theme:
+  shell: NeonPink
+  gtk: NeonPink
+  variant: static
 ```
 
 ---
@@ -209,11 +221,11 @@ See also: [Code of Conduct](CODE_OF_CONDUCT.md) | [Security Policy](SECURITY.md)
 
 ## 🗺️ Roadmap
 
-- [x] {{COMPLETED_FEATURE_1}}
-- [x] {{COMPLETED_FEATURE_2}}
-- [ ] {{PLANNED_FEATURE_1}}
-- [ ] {{PLANNED_FEATURE_2}}
-- [ ] {{PLANNED_FEATURE_3}}
+- [x] NeonPink static GNOME Shell + GTK variant
+- [x] NeonPink animated GNOME Shell variant
+- [ ] Add additional colourway variants
+- [ ] Add installer script hardening and validation
+- [ ] Add screenshots and preview gallery automation
 
 See the [open issues](https://github.com/XAOSTECH/themes/issues) for a full list of proposed features and known issues.
 
@@ -221,7 +233,7 @@ See the [open issues](https://github.com/XAOSTECH/themes/issues) for a full list
 
 ## 💬 Support
 
-- 📧 **Email**: {{SUPPORT_EMAIL}}
+- 📧 **Email**: maintainers@xaostech.dev
 - 💻 **Issues**: [GitHub Issues](https://github.com/XAOSTECH/themes/issues)
 - 💬 **Discussions**: [GitHub Discussions](https://github.com/XAOSTECH/themes/discussions)
 - 📝 **Wiki**: [GitHub Wiki](https://github.com/XAOSTECH/themes/wiki)
@@ -236,9 +248,9 @@ Distributed under the GPL-3.0 License. See [`LICENSE`](LICENSE) for more informa
 
 ## 🙏 Acknowledgements
 
-- {{ACKNOWLEDGMENT_1}}
-- {{ACKNOWLEDGMENT_2}}
-- {{ACKNOWLEDGMENT_3}}
+- GNOME Shell and GTK theming communities
+- [pastel](https://github.com/sharkdp/pastel) for colour exploration
+- XAOSTECH contributors and testers
 
 ---
 
