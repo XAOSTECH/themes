@@ -1,3 +1,6 @@
+# Template created by https://github.com/XAOSTECH/dev-control
+# See templates folder documentation for details.
+
 name: Text Replacement
 
 on:
@@ -27,19 +30,19 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
         with:
           fetch-depth: 0
 
       - name: Generate App Token
         id: app_token
-        uses: actions/create-github-app-token@v1
+        uses: actions/create-github-app-token@v2
         with:
           app-id: ${{ secrets['XB_AI'] }}
           private-key: ${{ secrets['XB_PK'] }}
 
       - name: Setup bot identity
-        uses: XAOSTECH/dev-control/.github/actions/identity@main
+        uses: XAOSTECH/dev-control/.github/actions/identity@b067f72ca7f849b734a45634f23581a739d5146f # v2.0.0
         with:
           gpg-private-key: ${{ secrets['XB_GK'] }}
           gpg-passphrase: ${{ secrets['XB_GP'] }}
@@ -137,7 +140,7 @@ jobs:
       - name: Setup bot identity (if replacement needed)
         id: import_gpg
         if: steps.replace.outputs.needs_pr == 'true'
-        uses: XAOSTECH/dev-control/.github/actions/identity@main
+        uses: XAOSTECH/dev-control/.github/actions/identity@b067f72ca7f849b734a45634f23581a739d5146f # v2.0.0
         with:
           gpg-private-key: ${{ secrets['XB_GK'] }}
           gpg-passphrase: ${{ secrets['XB_GP'] }}
