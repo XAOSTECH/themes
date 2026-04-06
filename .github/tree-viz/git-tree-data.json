@@ -1,0 +1,162 @@
+{
+  "metadata": {
+    "repository": "themes",
+    "current_branch": "main",
+    "repo_url": "https://github.com/XAOSTECH/themes",
+    "generated": "2026-04-06T01:20:55Z",
+    "max_commits": 500
+  },
+  "commits": [
+  {
+    "sha": "1bdb43a2ef171d8a9e4d7f8ccec0b0f166765bf4",
+    "short": "1bdb43a",
+    "parents": "bd98d5e78bae620669ccdea03af68582c6cbf883 79c842fbd0a1cea624e922b9b3a602ef3ebbede4",
+    "author": "xaostech[bot]",
+    "email": "260314499+xaostech[bot]@users.noreply.github.com",
+    "date": "2026-04-01T02:11:14Z",
+    "timestamp": 1775009474,
+    "subject": "Merge pull request #2 from XAOSTECH:anglicise/20260401-021042",
+    "refs": "HEAD -> main, origin/main"
+  },
+  {
+    "sha": "79c842fbd0a1cea624e922b9b3a602ef3ebbede4",
+    "short": "79c842f",
+    "parents": "bd98d5e78bae620669ccdea03af68582c6cbf883",
+    "author": "xaos-bot",
+    "email": "262248812+xaos-bot@users.noreply.github.com",
+    "date": "2026-04-01T02:10:42Z",
+    "timestamp": 1775009442,
+    "subject": "chore: convert American spellings to British English",
+    "refs": "origin/anglicise/20260401-021042"
+  },
+  {
+    "sha": "bd98d5e78bae620669ccdea03af68582c6cbf883",
+    "short": "bd98d5e",
+    "parents": "4e388a48cb44dbb5713f0c994c3b805b2ea9f9ab",
+    "author": "xaos-bot",
+    "email": "262248812+xaos-bot@users.noreply.github.com",
+    "date": "2026-03-30T01:20:11Z",
+    "timestamp": 1774833611,
+    "subject": "chore: update CHANGELOG for v0.1.0",
+    "refs": "tag: v0.1.0, tag: latest"
+  },
+  {
+    "sha": "4e388a48cb44dbb5713f0c994c3b805b2ea9f9ab",
+    "short": "4e388a4",
+    "parents": "1f4fb23b36c9249d83157aa3723493054e4b1500",
+    "author": "xaoscience",
+    "email": "69734795+xaoscience@users.noreply.github.com",
+    "date": "2026-03-23T17:49:13+01:00",
+    "timestamp": 1774284553,
+    "subject": "chore(dc-init): load workflows,actions",
+    "refs": ""
+  },
+  {
+    "sha": "1f4fb23b36c9249d83157aa3723493054e4b1500",
+    "short": "1f4fb23",
+    "parents": "84a4f91158938ea21d2f2c1ff28a6bb87d8b8ecf",
+    "author": "XAOSTECH",
+    "email": "69734795+xaoscience@users.noreply.github.com",
+    "date": "2026-03-21T01:34:04+01:00",
+    "timestamp": 1774053244,
+    "subject": "chore(dc-init): update workflows + action",
+    "refs": ""
+  },
+  {
+    "sha": "84a4f91158938ea21d2f2c1ff28a6bb87d8b8ecf",
+    "short": "84a4f91",
+    "parents": "68f6c87a5d2c25b3f699e0bb24f6e9b198355017",
+    "author": "xaoscience",
+    "email": "69734795+xaoscience@users.noreply.github.com",
+    "date": "2026-03-05T21:08:40+01:00",
+    "timestamp": 1772741320,
+    "subject": "docs: complete README template",
+    "refs": ""
+  },
+  {
+    "sha": "68f6c87a5d2c25b3f699e0bb24f6e9b198355017",
+    "short": "68f6c87",
+    "parents": "3aef13b2f47250faf6b35920261fc97c09558511 73c6099066506974e4060bae52dc4d53e3649034",
+    "author": "xaos-bot",
+    "email": "262248812+xaos-bot@users.noreply.github.com",
+    "date": "2026-03-01T01:58:47Z",
+    "timestamp": 1772330327,
+    "subject": "Merge pull request #1 from XAOSTECH:anglicise/20260301-015818\\n\\nchore: Convert American spellings to British English",
+    "refs": ""
+  },
+  {
+    "sha": "73c6099066506974e4060bae52dc4d53e3649034",
+    "short": "73c6099",
+    "parents": "3aef13b2f47250faf6b35920261fc97c09558511",
+    "author": "xaos-bot",
+    "email": "262248812+xaos-bot@users.noreply.github.com",
+    "date": "2026-03-01T01:58:18Z",
+    "timestamp": 1772330298,
+    "subject": "chore: convert American spellings to British English",
+    "refs": ""
+  },
+  {
+    "sha": "3aef13b2f47250faf6b35920261fc97c09558511",
+    "short": "3aef13b",
+    "parents": "abf96205d313fba8bf7ef0cd1e138504e6d4b9d1",
+    "author": "xaos-bot",
+    "email": "262248812+xaos-bot@users.noreply.github.com",
+    "date": "2026-02-23T21:35:18Z",
+    "timestamp": 1771882518,
+    "subject": "chore: update CHANGELOG for v0.0.1",
+    "refs": "tag: v0.0.1"
+  },
+  {
+    "sha": "abf96205d313fba8bf7ef0cd1e138504e6d4b9d1",
+    "short": "abf9620",
+    "parents": "d26bde5bb4b894f25209d53bcb2652a5065c6a95",
+    "author": "xaoscience",
+    "email": "69734795+xaoscience@users.noreply.github.com",
+    "date": "2026-02-23T22:17:15+01:00",
+    "timestamp": 1771881435,
+    "subject": "chore(readme/dir): add GTK referral + move GTK Themes",
+    "refs": ""
+  },
+  {
+    "sha": "d26bde5bb4b894f25209d53bcb2652a5065c6a95",
+    "short": "d26bde5",
+    "parents": "d9f517431c1f05199cd43e86cc0b5b2b86112610",
+    "author": "xaoscience",
+    "email": "69734795+xaoscience@users.noreply.github.com",
+    "date": "2026-02-23T22:13:27+01:00",
+    "timestamp": 1771881207,
+    "subject": "dc-init",
+    "refs": ""
+  },
+  {
+    "sha": "d9f517431c1f05199cd43e86cc0b5b2b86112610",
+    "short": "d9f5174",
+    "parents": "12bdeb64f48a5badc5860043608808f10a049ab4",
+    "author": "xaoscience",
+    "email": "69734795+xaoscience@users.noreply.github.com",
+    "date": "2026-02-22T00:06:24+01:00",
+    "timestamp": 1771715184,
+    "subject": "Redesign with soft off-pink pastels: use pastel-generated colors, increase transparency, add comprehensive GNOME component styling",
+    "refs": ""
+  },
+  {
+    "sha": "12bdeb64f48a5badc5860043608808f10a049ab4",
+    "short": "12bdeb6",
+    "parents": "",
+    "author": "xaoscience",
+    "email": "69734795+xaoscience@users.noreply.github.com",
+    "date": "2026-02-21T23:48:40+01:00",
+    "timestamp": 1771714120,
+    "subject": "init",
+    "refs": ""
+  }
+],
+  "branches": [
+  {"name":"1bdb43a2ef171d8a9e4d7f8ccec0b0f166765bf4 Merge pull request #2 from XAOSTECH:anglicise/20260401-021042","sha":"*","current":false,"merged":false}
+],
+  "tags": [
+  {"name":"latest","sha":"87f35286f74cb8ea70b4dc30cc8aff429f911f98"},
+  {"name":"v0.0.1","sha":"8cb824b3aff9ee322a616f09ddf1ea37b9674925"},
+  {"name":"v0.1.0","sha":"932de038daf5f1d419a05b6434dc27236b2995f6"}
+]
+}
