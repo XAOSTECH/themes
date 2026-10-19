@@ -1,4 +1,18 @@
 
+## [0.1.0] - 2026-10-19 (re-release)
+
+### Changed
+- chore: humanise hard-wrapped comments and prose
+- chore(dc-init): update workflows,actions
+- chore: convert American spellings to British English
+- chore(dc-init): load workflows,actions
+- chore(dc-init): update workflows + action
+- chore(readme/dir): add GTK referral + move GTK Themes
+- dc-init
+
+### Documentation
+- complete README template
+
 ## [0.1.0] - 2026-10-05 (re-release)
 
 ### Changed
