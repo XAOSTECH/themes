@@ -90,6 +90,7 @@ The `themes` project centralises desktop and editor theming assets so visual des
 - 📦 **Packaged Variants** - Static and animated theme flavours
 - 🔒 **Readable Contrast Choices** - Colour sets tuned for practical usability
 - ⚡ **Monorepo Integration** - Versioned alongside `design-flows`
+- 🔁 **Runtime Palette Cycling** - Random kitty + starship palette per terminal (sub-15ms, no pastel at launch)
 
 ---
 
@@ -173,6 +174,46 @@ gsettings set org.gnome.shell.extensions.user-theme name "NeonPink_Animated"
 
 ---
 
+## 🎨 Runtime palette cycling
+
+Alongside the desktop themes, this repository ships a terminal/shell palette cycler that selects a random colour palette on every new interactive shell and points kitty and starship at it.
+Generation happens in the `tuiGen` flow in [design-flows](https://github.com/XAOSTECH/design-flows); this repository stores the pre-generated palettes and activates them, so the shell-startup path never runs `pastel`.
+See [`bin/themes-cycle.sh`](../bin/themes-cycle.sh) and the palette assets in [`assets/palettes/`](../assets/palettes/).
+
+### Install the cycler
+
+1. Make the palettes discoverable — either copy the assets into place or point `THEMES_DIR` at this checkout:
+
+   ```bash
+   # Option A — copy
+   mkdir -p ~/.config/themes
+   cp -r assets/palettes assets/fallback ~/.config/themes/
+
+   # Option B — point at the repo
+   export THEMES_DIR="$PWD/assets"
+   ```
+
+2. Add a permanent include to `~/.config/kitty/kitty.conf` (the cycler swaps the target atomically):
+
+   ```conf
+   include current-theme.conf
+   ```
+
+3. Source the hook from your shell startup file so `STARSHIP_CONFIG` is exported into the shell:
+
+   ```bash
+   # bash — ~/.bashrc   /   zsh — ~/.zshrc
+   . /path/to/themes/bin/themes-cycle.sh
+
+   # fish — ~/.config/fish/config.fish (scaffold)
+   source /path/to/themes/bin/themes-cycle.fish
+   ```
+
+Open a new terminal and the palette changes.
+If no palette is available, the cycler drops back to the fixed fallback profile (`#0a0512` / `#100e23` / `#ff00aa`).
+
+---
+
 ## ⚙️ Configuration
 
 ### Environment Variables
@@ -181,6 +222,7 @@ gsettings set org.gnome.shell.extensions.user-theme name "NeonPink_Animated"
 |----------|-------------|---------|
 | `XDG_CONFIG_HOME` | User configuration root used by desktop components | `~/.config` |
 | `XDG_DATA_HOME` | User data root that may contain theme assets | `~/.local/share` |
+| `THEMES_DIR` | Base directory the palette cycler reads (`palettes/`, `fallback/`) | `~/.config/themes` |
 
 ### Configuration File
 
@@ -223,6 +265,7 @@ See also: [Code of Conduct](CODE_OF_CONDUCT.md) | [Security Policy](SECURITY.md)
 
 - [x] NeonPink static GNOME Shell + GTK variant
 - [x] NeonPink animated GNOME Shell variant
+- [x] Runtime palette cycler for kitty + starship (bash/zsh, fish scaffold)
 - [ ] Add additional colourway variants
 - [ ] Add installer script hardening and validation
 - [ ] Add screenshots and preview gallery automation
