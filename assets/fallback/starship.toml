@@ -1,0 +1,38 @@
+# fallback — starship config (themes cycler safety profile)
+# Used when no palette set is installed or a selection fails. Anchored on the
+# fixed fallback colours: background #0a0512, surface #100e23, accent #ff00aa.
+
+"$schema" = 'https://starship.rs/config-schema.json'
+
+palette = "fallback"
+
+format = """
+[ ](bg:accent)\
+$directory\
+$git_branch\
+$character """
+
+[palettes.fallback]
+fg = "#f3e9f2"
+bg = "#0a0512"
+accent = "#ff00aa"
+muted = "#100e23"
+red = "#ff3366"
+green = "#4be3a0"
+yellow = "#ffcc66"
+blue = "#6699ff"
+magenta = "#ff00aa"
+cyan = "#66e0ff"
+
+[directory]
+style = "fg:bg bg:accent"
+format = "[ $path ]($style)"
+
+[git_branch]
+symbol = " "
+style = "fg:accent bg:muted"
+format = "[ $symbol$branch ]($style)"
+
+[character]
+success_symbol = "[ ❯](fg:accent)"
+error_symbol = "[ ❯](fg:red)"

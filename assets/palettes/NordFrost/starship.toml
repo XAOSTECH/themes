@@ -1,0 +1,42 @@
+# NordFrost — starship config (sample for the themes cycler)
+# The cycler points STARSHIP_CONFIG at this file. The prompt below is a minimal
+# demonstration — replace the format/modules with your own, but keep the
+# `palette` selector and the [palettes.nordfrost] block so colours stay in sync.
+#
+# Regenerate the palette block with:
+#   tuiGen --target starship --preset nord -o /path/to/themes/assets/palettes
+
+"$schema" = 'https://starship.rs/config-schema.json'
+
+palette = "nordfrost"
+
+format = """
+[ ](bg:accent)\
+$directory\
+$git_branch\
+$character """
+
+[palettes.nordfrost]
+fg = "#d8dee9"
+bg = "#2e3440"
+accent = "#81a1c1"
+muted = "#4c566a"
+red = "#bf616a"
+green = "#a3be8c"
+yellow = "#ebcb8b"
+blue = "#81a1c1"
+magenta = "#b48ead"
+cyan = "#88c0d0"
+
+[directory]
+style = "fg:bg bg:accent"
+format = "[ $path ]($style)"
+
+[git_branch]
+symbol = " "
+style = "fg:accent bg:muted"
+format = "[ $symbol$branch ]($style)"
+
+[character]
+success_symbol = "[ ❯](fg:accent)"
+error_symbol = "[ ❯](fg:red)"

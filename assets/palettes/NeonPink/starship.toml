@@ -1,0 +1,42 @@
+# NeonPink — starship config (sample for the themes cycler)
+# The cycler points STARSHIP_CONFIG at this file. The prompt below is a minimal
+# demonstration — replace the format/modules with your own, but keep the
+# `palette` selector and the [palettes.neonpink] block so colours stay in sync.
+#
+# Regenerate the palette block with:
+#   tuiGen --target starship --preset neonpink -o /path/to/themes/assets/palettes
+
+"$schema" = 'https://starship.rs/config-schema.json'
+
+palette = "neonpink"
+
+format = """
+[ ](bg:accent)\
+$directory\
+$git_branch\
+$character """
+
+[palettes.neonpink]
+fg = "#ffbcde"
+bg = "#26002f"
+accent = "#ff69b4"
+muted = "#500061"
+red = "#ff6969"
+green = "#00ffd9"
+yellow = "#a6ff00"
+blue = "#ff6969"
+magenta = "#ff69b4"
+cyan = "#b4ff69"
+
+[directory]
+style = "fg:bg bg:accent"
+format = "[ $path ]($style)"
+
+[git_branch]
+symbol = " "
+style = "fg:accent bg:muted"
+format = "[ $symbol$branch ]($style)"
+
+[character]
+success_symbol = "[ ❯](fg:accent)"
+error_symbol = "[ ❯](fg:red)"
