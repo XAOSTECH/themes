@@ -10,15 +10,14 @@ Generated using `pastel` for beautiful, harmonious colours:
 - **Deep Tones**: #76347f (118, 52, 127)
 
 ## Location
-- **GnomeShell themes**: `/home/jnxlr/PRO/ART/DES/themes/GnomeShell/`
-- **GTK themes**: `/home/jnxlr/PRO/ART/DES/themes/GTK/`
-- **Symlinks**: `~/.themes/` (for GNOME compatibility)
+- **GTK + GNOME Shell themes**: `GTK/<ThemeName>/` (each theme bundles `gtk-4.0/` and `gnome-shell/`)
+- **Symlinks**: `~/.themes/<ThemeName>` (for GNOME compatibility)
 
 ## Variants
 
 ### NeonPink (Static)
 Soft pastel glow effects with high transparency - **Wayland compatible**.
-- Location: `GnomeShell/NeonPink/`
+- Location: `GTK/NeonPink/`
 - Features: 
   - Soft off-pink pastel colours throughout
   - Enhanced transparency (30-50% on most elements)
@@ -38,7 +37,7 @@ Soft pastel glow effects with high transparency - **Wayland compatible**.
 
 ### NeonPink_Animated
 Gentle pastel glow animations with breathing effects.
-- Location: `GnomeShell/NeonPink_Animated/`
+- Location: `GTK/NeonPink_Animated/`
 - Features: 
   - All features from static version
   - Smooth `pastelGlow` animation (softer than original neon flicker)
