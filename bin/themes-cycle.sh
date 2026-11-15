@@ -1,17 +1,13 @@
 #!/usr/bin/env sh
+# ═══════════════════════════════════════════════════════════════════════════════ themes-cycle.sh — runtime palette cycler for kitty + starship
 # ═══════════════════════════════════════════════════════════════════════════════
-# themes-cycle.sh — runtime palette cycler for kitty + starship
-# ═══════════════════════════════════════════════════════════════════════════════
-# Picks a pre-generated palette at random on every new interactive shell and
-# points kitty and starship at it. Designed to be sourced from ~/.bashrc or
+# Picks a pre-generated palette at random on every new interactive shell and points kitty and starship at it. Designed to be sourced from ~/.bashrc or
 # ~/.zshrc so that STARSHIP_CONFIG is exported into the shell:
 #
 #   . /path/to/themes/bin/themes-cycle.sh
 #
-# Palettes are pre-generated (see ../assets/palettes/, regenerated with tuiGen),
-# so this hot path never runs pastel. It performs no destructive disk edits
-# (no sed -i): kitty is switched by an atomic symlink swap and starship by an
-# environment override, which keeps concurrent shell spawns race-free.
+# Palettes are pre-generated (see ../assets/palettes/, regenerated with tuiGen), so this hot path never runs pastel. It performs no destructive disk edits
+# (no sed -i): kitty is switched by an atomic symlink swap and starship by an environment override, which keeps concurrent shell spawns race-free.
 #
 # Design mandates honoured:
 #   * Sub-15ms: pure shell builtins plus two tiny coreutils calls (ln, mv).
@@ -24,8 +20,7 @@
 #                Default: $HOME/.config/themes
 # ═══════════════════════════════════════════════════════════════════════════════
 
-# Fixed fallback profile (background #0a0512, surface #100e23, accent #ff00aa)
-# is exported only as a last resort — see themes_cycle below.
+# Fixed fallback profile (background #0a0512, surface #100e23, accent #ff00aa) is exported only as a last resort — see themes_cycle below.
 
 # Apply a single palette directory to kitty and starship.
 # Usage: _themes_apply <palette-dir>
@@ -34,8 +29,7 @@ _themes_apply() {
     _tc_choice="${1%/}"
     [ -d "$_tc_choice" ] || return 1
 
-    # kitty: atomic symlink swap of current-theme.conf. kitty.conf is expected
-    # to carry a permanent `include current-theme.conf`; new windows read it.
+    # kitty: atomic symlink swap of current-theme.conf. kitty.conf is expected to carry a permanent `include current-theme.conf`; new windows read it.
     if [ -d "$HOME/.config/kitty" ] && [ -f "$_tc_choice/kitty.conf" ]; then
         _tc_tmp="$HOME/.config/kitty/.current-theme.$$.tmp"
         if ln -sf -- "$_tc_choice/kitty.conf" "$_tc_tmp" 2>/dev/null; then

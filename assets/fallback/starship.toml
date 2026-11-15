@@ -1,6 +1,5 @@
 # fallback — starship config (themes cycler safety profile)
-# Used when no palette set is installed or a selection fails. Anchored on the
-# fixed fallback colours: background #0a0512, surface #100e23, accent #ff00aa.
+# Used when no palette set is installed or a selection fails. Anchored on the fixed fallback colours: background #0a0512, surface #100e23, accent #ff00aa.
 
 "$schema" = 'https://starship.rs/config-schema.json'
 
