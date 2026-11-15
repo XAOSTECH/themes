@@ -1,6 +1,5 @@
 # NeonPink — starship config (sample for the themes cycler)
-# The cycler points STARSHIP_CONFIG at this file. The prompt below is a minimal
-# demonstration — replace the format/modules with your own, but keep the
+# The cycler points STARSHIP_CONFIG at this file. The prompt below is a minimal demonstration — replace the format/modules with your own, but keep the
 # `palette` selector and the [palettes.neonpink] block so colours stay in sync.
 #
 # Regenerate the palette block with:
