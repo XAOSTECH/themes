@@ -1,8 +1,16 @@
 
-## [0.1.0] - 2026-10-19 (re-release)
+## [0.1.0] - 2026-11-16 (re-release)
+
+### Added
+- add runtime palette cycler for kitty and starship
+
+### Fixed
+- use host-agnostic paths and correct theme layout in GTK readme
 
 ### Changed
 - chore: humanise hard-wrapped comments and prose
+- chore(dc-init): update workflows,actions,docs
+- docs(README): document the runtime palette cycler
 - chore(dc-init): update workflows,actions
 - chore: convert American spellings to British English
 - chore(dc-init): load workflows,actions
